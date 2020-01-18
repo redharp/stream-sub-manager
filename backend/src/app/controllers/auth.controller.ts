@@ -38,12 +38,12 @@ export class AuthController {
     @Post('/login')
     @ValidateBody(credentialSchema)
     async login(ctx: Context) {
-        const user = await getRepository(User).findOne({ email: ctx.user.email });
+        const user = await getRepository(User).findOne({ email: ctx.request.body.email });
 
         if (!user)
             return new HttpResponseUnauthorized();
 
-        if (!await verifyPassword(ctx.user.password, user.password))
+        if (!await verifyPassword(ctx.request.body.password, user.password))
             return new HttpResponseUnauthorized();
 
         const session = await this.store.createAndSaveSessionFromUser(user);
