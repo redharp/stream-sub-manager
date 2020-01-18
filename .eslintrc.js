@@ -37,7 +37,7 @@ module.exports = {
     'no-shadow': 'off',
     'comma-dangle': 'off',
     'sort-keys': 'off',
-    '@typescript-eslint/no-unused-vars': ['error', { 'args':  'none' }],
+    '@typescript-eslint/no-unused-vars': ['warn', { 'args':  'none' }],
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/require-await': 'off'
   },

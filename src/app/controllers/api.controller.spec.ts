@@ -32,3 +32,11 @@ describe('ApiController', () => {
   });
 
 });
+
+
+// const sub = new Subscription();
+//     sub.service = 'Netflix';
+//     sub.isActive = true;
+//     sub.lastFour = '9016';
+//     sub.renewal = moment('02-05-2020').toDate();
+//     sub.user = ctx.user;
